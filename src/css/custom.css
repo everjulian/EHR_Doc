@@ -1,0 +1,54 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #201C75; /* Azul Oscuro */
+  --ifm-color-primary-dark: #18165a;
+  --ifm-color-primary-darker: #15124d;
+  --ifm-color-primary-darkest: #100e3a;
+  --ifm-color-primary-light: #2a25a0;
+  --ifm-color-primary-lighter: #3a36c2;
+  --ifm-color-primary-lightest: #4a47e5;
+  --ifm-color-secondary: #047CDB; /* Celeste */
+  --ifm-color-danger: #C10E21; /* Rojo */
+  --ifm-background-color: #FFFFFF; /* Blanco */
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(32, 28, 117, 0.07);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #201C75; /* Azul Oscuro */
+  --ifm-color-primary-dark: #18165a;
+  --ifm-color-primary-darker: #15124d;
+  --ifm-color-primary-darkest: #100e3a;
+  --ifm-color-primary-light: #2a25a0;
+  --ifm-color-primary-lighter: #3a36c2;
+  --ifm-color-primary-lightest: #4a47e5;
+  --ifm-color-secondary: #047CDB; /* Celeste */
+  --ifm-color-danger: #C10E21; /* Rojo */
+  --ifm-background-color: #181A20; /* Fondo oscuro personalizado */
+  --docusaurus-highlighted-code-line-bg: rgba(32, 28, 117, 0.15);
+  color: #fff !important;
+}
+
+[data-theme='dark'] body,
+[data-theme='dark'] h1,
+[data-theme='dark'] h2,
+[data-theme='dark'] h3,
+[data-theme='dark'] h4,
+[data-theme='dark'] h5,
+[data-theme='dark'] h6,
+[data-theme='dark'] p,
+[data-theme='dark'] span,
+[data-theme='dark'] li,
+[data-theme='dark'] a,
+[data-theme='dark'] th,
+[data-theme='dark'] td,
+[data-theme='dark'] label {
+  color: #fff !important;
+}
