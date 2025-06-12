@@ -6,6 +6,17 @@
 }
 
 .featureSvg {
-  height: 200px;
-  width: 200px;
+  max-height: 180px;
+  max-width: 90%;
+  width: auto;
+  height: auto;
+  margin-bottom: 1rem;
+  object-fit: contain;
+  display: inline-block;
+}
+
+.features img.featureSvg {
+  background: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(32,28,117,0.08);
 }

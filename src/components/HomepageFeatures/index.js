@@ -11,32 +11,39 @@ const FeatureList = [
         Administra historias clínicas, citas, signos vitales y prescripciones de manera centralizada y segura.
       </>
     ),
+    isImg: false,
   },
   {
     title: 'Backend y Frontend Modernos',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    img: '/img/ehrimg2.png',
     description: (
       <>
         API RESTful en Node.js y frontend en Angular, diseñados para clínicas, hospitales y consultorios.
       </>
     ),
+    isImg: true,
   },
   {
     title: 'Seguridad y Accesibilidad',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    img: '/img/ehrimg3.png',
     description: (
       <>
         Acceso seguro con autenticación JWT y roles. Interfaz responsiva y fácil de usar para todo el personal médico.
       </>
     ),
+    isImg: true,
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({Svg, img, title, description, isImg}) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        {isImg ? (
+          <img src={img} alt={title} className={styles.featureSvg} style={{maxHeight: 180}} />
+        ) : (
+          <Svg className={styles.featureSvg} role="img" />
+        )}
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
