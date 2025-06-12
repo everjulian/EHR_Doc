@@ -5,13 +5,13 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'Gestión Integral de Pacientes',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    img: '/img/ehrimg1.png',
     description: (
       <>
         Administra historias clínicas, citas, signos vitales y prescripciones de manera centralizada y segura.
       </>
     ),
-    isImg: false,
+    isImg: true,
   },
   {
     title: 'Backend y Frontend Modernos',
