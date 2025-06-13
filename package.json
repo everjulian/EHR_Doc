@@ -1,6 +1,7 @@
 {
   "name": "ehr-docs",
   "version": "0.0.0",
+  "homepage": "https://everjulian.github.io/EHR_Doc",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
