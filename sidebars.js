@@ -13,7 +13,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Backend (Node.js)',
-      items: ['backend'],
+      items: ['backend', 'base-datos'],
     },
     {
       type: 'category',

@@ -12,7 +12,7 @@ const config = {
   },
 
   url: 'https://everjulian.github.io',
-  baseUrl: '/EHR_Doc/',
+  baseUrl: '/',
 
   organizationName: 'everjulian',
   projectName: 'EHR_Doc',

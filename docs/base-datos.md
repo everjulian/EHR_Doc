@@ -1,4 +1,3 @@
-
 ## Diccionario de datos y catálogos
 
 ### Modelos principales
