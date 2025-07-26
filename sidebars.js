@@ -23,7 +23,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Diagramas',
-      items: ['flujo-autenticacion', 'erdiagram'],
+      items: ['flujo-autenticacion', 'erdiagram', 'diccionario-datos'],
     },
   ],
 };

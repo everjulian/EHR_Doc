@@ -2,7 +2,6 @@
 id: flujo-autenticacion
 title: Flujo de Autenticación
 ---
-
 # Flujo de Autenticación
 
 ```mermaid
