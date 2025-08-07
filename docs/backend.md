@@ -46,7 +46,10 @@ Este proyecto es una API RESTful desarrollada en Node.js y Express para la gesti
    JWT_SECRET=tu_clave_secreta
    PORT=3000
    ```
-4. Ejecuta las migraciones para crear las tablas:
+
+> ⚠️ **Advertencia:** Si trabajas con una base de datos compartida o en la nube, **no ejecutes las migraciones** sin autorización, ya que podrías dañar la base de datos existente. Consulta con el administrador antes de correr `npx sequelize-cli db:migrate`.
+
+4. Si tienes permiso para crear la base de datos desde cero, ejecuta las migraciones:
    ```sh
    npx sequelize-cli db:migrate
    ```
@@ -58,24 +61,29 @@ Este proyecto es una API RESTful desarrollada en Node.js y Express para la gesti
 ## Uso
 El servidor se ejecuta por defecto en `http://localhost:3000`. Todas las rutas de la API están bajo el prefijo `/api`.
 
-### Endpoints principales
-- **/api/auth/**: Autenticación y registro de usuarios
-- **/api/patients/**: Gestión de pacientes
-- **/api/citas/**: Gestión de citas médicas
-- **/api/consultorios/**: Consultorios médicos
-- **/api/vital-signs/**: Signos vitales
-- **/api/evoluciones/**: Evoluciones médicas
-- **/api/prescripciones/**: Prescripciones médicas
-- **/api/catalogos/**: Catálogos médicos (CIE-10, medicamentos, provincias, etc.)
-- **/api/ubicacion/**: Provincias, cantones y parroquias
-- **/api/admin/**: Administración de usuarios
+## Endpoints principales
+
+| Endpoint                  | Descripción                                 |
+|--------------------------|---------------------------------------------|
+| `/api/auth/`             | Autenticación y registro de usuarios        |
+| `/api/patients/`         | Gestión de pacientes                       |
+| `/api/citas/`            | Gestión de citas médicas                   |
+| `/api/consultorios/`     | Consultorios médicos                       |
+| `/api/vital-signs/`      | Signos vitales                             |
+| `/api/evoluciones/`      | Evoluciones médicas                        |
+| `/api/prescripciones/`   | Prescripciones médicas                     |
+| `/api/catalogos/`        | Catálogos médicos (CIE-10, medicamentos...)|
+| `/api/ubicacion/`        | Provincias, cantones y parroquias          |
+| `/api/admin/`            | Administración de usuarios                 |
 
 > **Nota:** La mayoría de los endpoints requieren autenticación mediante JWT.
 
 ## Scripts útiles
 - `npm start`: Inicia el servidor en modo producción
 - `npm run dev`: Inicia el servidor en modo desarrollo (si tienes nodemon configurado)
-- `npx sequelize-cli db:migrate`: Ejecuta las migraciones de la base de datos
+- `npx sequelize-cli db:migrate`: Ejecuta las migraciones de la base de datos (**solo si tienes permiso sobre la base de datos**)
+
+> Si solo tienes acceso a la base de datos en la nube y no debes modificar la estructura, simplemente crea tu archivo `.env`, ejecuta `npm install` y luego `npm run dev`.
 
 ## Estructura de carpetas
 - `controllers/`: Lógica de negocio y controladores de rutas

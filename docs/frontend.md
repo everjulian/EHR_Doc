@@ -17,9 +17,9 @@ Este proyecto es una aplicación frontend desarrollada en Angular para la gesti�
 - Interfaz moderna y responsiva
 
 ## Requisitos previos
-- Node.js >= 18.x
-- Angular CLI >= 18.x
-- npm >= 9.x
+- Node.js >= 16.x (recomendado 18.x)
+- Angular CLI >= 16.x (recomendado 18.x)
+- npm >= 8.x (recomendado 9.x)
 
 ## Instalación
 1. Clona el repositorio:
@@ -32,11 +32,29 @@ Este proyecto es una aplicación frontend desarrollada en Angular para la gesti�
    npm install
    ```
 
-## Scripts disponibles
-- `npm start` o `ng serve`: Inicia el servidor de desarrollo en `http://localhost:4200/`
-- `npm run build` o `ng build`: Compila la aplicación para producción en la carpeta `dist/`
-- `npm test` o `ng test`: Ejecuta los tests unitarios con Karma
-- `npm run serve:ssr:ehr-frontend`: Ejecuta el servidor SSR (Angular Universal)
+## Scripts principales
+- `npm start` o `ng serve`: Inicia el servidor de desarrollo en `http://localhost:4200/`.
+- `npm run build` o `ng build`: Compila la aplicación para producción en la carpeta `dist/`.
+- `npm test` o `ng test`: Ejecuta los tests unitarios con Karma.
+- `npm run serve:ssr:ehr-frontend`: Ejecuta el servidor SSR (Angular Universal).
+
+## Rutas principales
+
+| Ruta                | Descripción                                 |
+|---------------------|---------------------------------------------|
+| `/login`            | Login de usuario                            |
+| `/patients`         | Gestión de pacientes                        |
+| `/admin`            | Dashboard de administrador                  |
+| `/doctor`           | Dashboard de doctor y subrutas              |
+| `/secretaria`       | Dashboard de secretaria y subrutas          |
+| `/enfermera`        | Dashboard de enfermera y subrutas           |
+| `/citas`            | Gestión de citas                            |
+| `/forgot-password`  | Recuperar contraseña                        |
+| `/reset-password`   | Restablecer contraseña                      |
+
+## Notas de desarrollo
+- Los guards y roles pueden ser deshabilitados para pruebas comentando las líneas correspondientes en `app.routes.ts`.
+- El backend debe estar corriendo y accesible para el funcionamiento completo de la app.
 
 ## Estructura de carpetas principal
 - `src/app/core/`: Servicios, guards e interceptores
@@ -57,7 +75,7 @@ Este proyecto es una aplicación frontend desarrollada en Angular para la gesti�
 ## Despliegue
 1. Compila la aplicación:
    ```sh
-   npm run build
+   npm run build o ng build
    ```
 2. El contenido de `dist/ehr-frontend/` puede ser desplegado en cualquier servidor web estático.
 3. Para SSR (Angular Universal):
@@ -65,11 +83,14 @@ Este proyecto es una aplicación frontend desarrollada en Angular para la gesti�
    npm run build && npm run serve:ssr:ehr-frontend
    ```
 
-## Contribución
-Las contribuciones son bienvenidas. Por favor, abre un issue o pull request para sugerencias o mejoras.
+## Comandos útiles de Angular CLI
+- `ng serve`: Inicia el servidor de desarrollo.
+- `ng build`: Compila la aplicación para producción.
+- `ng test`: Ejecuta los tests unitarios.
+- `ng e2e`: Ejecuta tests end-to-end (requiere configuración adicional).
+- `ng generate component <nombre>`: Genera un nuevo componente.
+- `ng help`: Muestra ayuda y referencia de comandos.
 
-## Contacto
-[Agrega aquí tu email o información de contacto]
 
 ---
 
